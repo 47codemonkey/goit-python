@@ -1,28 +1,48 @@
-first_number = int(input('Enter first number: '))
-operator = input('Enter operator: ')
-second_number = int(input('Enter second number: '))
+while True:
+        
+    try:
+        oper = input("Enter a number: ")
+        operand1 = float(oper)
+        break          
+    except ValueError:
+        print(f'{oper} is not a number!')
+        
+    
+while True:
+        
+    operator = input("Enter an operator: ")
+    if operator in ('+', '-', '*', '/'):
+        operator = operator
+            
+    elif operator == ('='):
+        print(operand1)
+        break
+    else:
+        print(f'{operator} is not correct!')
+        continue
 
-if operator == '+':
-    sign_equally = input("Enter '=' if u wanna see result: ")
-    if sign_equally == '=':
-        print(first_number + second_number)
-    else: 
-        print('better luck next time')
-elif operator == '-':
-    sign_equally = input("Enter '=' if u wanna see result: ")
-    if sign_equally == '=':
-        print(first_number - second_number)
-    else: 
-        print('bye bye')  
-elif operator == '/':
-    sign_equally = input("Enter '=' if u wanna see result: ")
-    if sign_equally == '=':
-        print(first_number // second_number)
-    else: 
-        print('go to hell')  
-elif operator == '*':
-    sign_equally = input("Enter '=' if u wanna see result: ")
-    if sign_equally == '=':
-         print(first_number * second_number)
-    else: 
-        print("I like u, I'll kill u last") 
+
+    while True:
+        
+        try:
+            oper = input("Enter a number: ")
+            operand2 = float(oper)
+            break          
+        except ValueError:
+            print(f'{oper} is not a number!')
+
+    if operator == "+":
+        operand1 = operand1 + operand2
+    if operator == "-":
+        operand1 = operand1 - operand2
+    if operator == "*":
+        operand1 = operand1 * operand2
+    try:
+        if operator == "/":
+            operand1 = operand1 / operand2
+    except ZeroDivisionError:
+        print(f'division on {operand2} is not possible')
+        continue
+    
+
+
