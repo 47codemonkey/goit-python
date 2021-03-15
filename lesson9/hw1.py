@@ -1,6 +1,5 @@
 main_dict = {}
 
-# tuple with commands words
 EXIT = ("good bye", "close", "exit")
 ADD = ("add")
 GREETINGS = ("hello")
