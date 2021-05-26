@@ -23,8 +23,6 @@ class Name(Field):
 
 
 class Phone(Field):
-    # def __init__(self, phone):
-    #     self.phone = phone
     @property
     def value(self):
         return self.__value
@@ -38,8 +36,6 @@ class Phone(Field):
 
 
 class Birthday(Field):
-    # def __init__(self, birthday=''):
-    #     self.birthday = birthday
     @property
     def value(self):
         return self.__value
